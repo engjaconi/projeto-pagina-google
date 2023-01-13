@@ -11,15 +11,15 @@
 <body>
     <header class="menu">
         <div class="menu__section left">
-            <svg class="menu__icon" xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M6 36v-3h36v3Zm0-10.5v-3h36v3ZM6 15v-3h36v3Z"/></svg>
+            <svg class="menu__icon" id="menu" xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M6 36v-3h36v3Zm0-10.5v-3h36v3ZM6 15v-3h36v3Z"/></svg>
 
-            <a href="#" class="menu__link active">Todas</a>
-            <a href="#" class="menu__link">Imagens</a>
+            <a href="#" class="menu__link active" id="todas">Todas</a>
+            <a href="#" class="menu__link" id="gmail">Gmail</a>
+            <a href="#" class="menu__link" id="imagens">Imagens</a>
         </div>
 
         <div class="menu__section right">
-            
-            <svg class="menu__icon" xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M8 38v-3h4.2V19.7q0-4.2 2.475-7.475Q17.15 8.95 21.2 8.1V6.65q0-1.15.825-1.9T24 4q1.15 0 1.975.75.825.75.825 1.9V8.1q4.05.85 6.55 4.125t2.5 7.475V35H40v3Zm16-14.75ZM24 44q-1.6 0-2.8-1.175Q20 41.65 20 40h8q0 1.65-1.175 2.825Q25.65 44 24 44Zm-8.8-9h17.65V19.7q0-3.7-2.55-6.3-2.55-2.6-6.25-2.6t-6.275 2.6Q15.2 16 15.2 19.7Z"/></svg>
+            <svg class="menu__icon" id="bell" xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M8 38v-3h4.2V19.7q0-4.2 2.475-7.475Q17.15 8.95 21.2 8.1V6.65q0-1.15.825-1.9T24 4q1.15 0 1.975.75.825.75.825 1.9V8.1q4.05.85 6.55 4.125t2.5 7.475V35H40v3Zm16-14.75ZM24 44q-1.6 0-2.8-1.175Q20 41.65 20 40h8q0 1.65-1.175 2.825Q25.65 44 24 44Zm-8.8-9h17.65V19.7q0-3.7-2.55-6.3-2.55-2.6-6.25-2.6t-6.275 2.6Q15.2 16 15.2 19.7Z"/></svg>
 
             <svg class="menu__icon" xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M11.3 40q-1.4 0-2.35-.95Q8 38.1 8 36.7q0-1.4.95-2.35.95-.95 2.35-.95 1.4 0 2.35.95.95.95.95 2.35 0 1.4-.95 2.35-.95.95-2.35.95ZM24 40q-1.4 0-2.35-.95-.95-.95-.95-2.35 0-1.4.95-2.35.95-.95 2.35-.95 1.4 0 2.35.95.95.95.95 2.35 0 1.4-.95 2.35Q25.4 40 24 40Zm12.7 0q-1.4 0-2.35-.95-.95-.95-.95-2.35 0-1.4.95-2.35.95-.95 2.35-.95 1.4 0 2.35.95.95.95.95 2.35 0 1.4-.95 2.35-.95.95-2.35.95ZM11.3 27.3q-1.4 0-2.35-.95Q8 25.4 8 24q0-1.4.95-2.35.95-.95 2.35-.95 1.4 0 2.35.95.95.95.95 2.35 0 1.4-.95 2.35-.95.95-2.35.95Zm12.7 0q-1.4 0-2.35-.95-.95-.95-.95-2.35 0-1.4.95-2.35.95-.95 2.35-.95 1.4 0 2.35.95.95.95.95 2.35 0 1.4-.95 2.35-.95.95-2.35.95Zm12.7 0q-1.4 0-2.35-.95-.95-.95-.95-2.35 0-1.4.95-2.35.95-.95 2.35-.95 1.4 0 2.35.95.95.95.95 2.35 0 1.4-.95 2.35-.95.95-2.35.95ZM11.3 14.6q-1.4 0-2.35-.95Q8 12.7 8 11.3q0-1.4.95-2.35Q9.9 8 11.3 8q1.4 0 2.35.95.95.95.95 2.35 0 1.4-.95 2.35-.95.95-2.35.95Zm12.7 0q-1.4 0-2.35-.95-.95-.95-.95-2.35 0-1.4.95-2.35Q22.6 8 24 8q1.4 0 2.35.95.95.95.95 2.35 0 1.4-.95 2.35-.95.95-2.35.95Zm12.7 0q-1.4 0-2.35-.95-.95-.95-.95-2.35 0-1.4.95-2.35Q35.3 8 36.7 8q1.4 0 2.35.95.95.95.95 2.35 0 1.4-.95 2.35-.95.95-2.35.95Z"/></svg>
 
@@ -30,42 +30,53 @@
     <main class="content">
         <img class="content__logo" src="./assets/images/googlelogo_color.png" alt="Logo Google">
 
-        <input class="content__search" type="text">
+        
+        
+        <form class="content__search" action="./pages/search.html" method="get" id="search">
+            <button class="search__button" type="submit"></button>
+            <svg class="search__icon" xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M39.8 41.95 26.65 28.8q-1.5 1.3-3.5 2.025-2 .725-4.25.725-5.4 0-9.15-3.75T6 18.75q0-5.3 3.75-9.05 3.75-3.75 9.1-3.75 5.3 0 9.025 3.75 3.725 3.75 3.725 9.05 0 2.15-.7 4.15-.7 2-2.1 3.75L42 39.75Zm-20.95-13.4q4.05 0 6.9-2.875Q28.6 22.8 28.6 18.75t-2.85-6.925Q22.9 8.95 18.85 8.95q-4.1 0-6.975 2.875T9 18.75q0 4.05 2.875 6.925t6.975 2.875Z"/></svg>
+            <input class="search__input" type="text" name="search" id="search" required min="3">
+        </form>
 
-        <div class="content__search">
-            <div class="content__item">
-                <svg class="search__icon" xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M6.15 36 4 33.85 18.6 19.3l8.35 8.35L39 15.6h-6.35v-3H44v11.35h-2.95V17.8L26.9 31.95l-8.35-8.35Z"/></svg>
-                <p class="search__text">lojas americanas bolsa</p>
-            </div>
-            <div class="content__item">
-                <svg class="search__icon" xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M6.15 36 4 33.85 18.6 19.3l8.35 8.35L39 15.6h-6.35v-3H44v11.35h-2.95V17.8L26.9 31.95l-8.35-8.35Z"/></svg>
-                <p class="search__text">suzane von richthofen</p>
-                <img class="search_img" src="./assets/images/suzane-von-richthofen.webp" alt="Foto de Suzane Von Richthofen">
-            </div>
-            <div class="content__item">
-                <svg class="search__icon" xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M6.15 36 4 33.85 18.6 19.3l8.35 8.35L39 15.6h-6.35v-3H44v11.35h-2.95V17.8L26.9 31.95l-8.35-8.35Z"/></svg>
-                <p class="search__text">agu</p>
-            </div>
-            <div class="content__item">
-                <svg class="search__icon" xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M6.15 36 4 33.85 18.6 19.3l8.35 8.35L39 15.6h-6.35v-3H44v11.35h-2.95V17.8L26.9 31.95l-8.35-8.35Z"/></svg>
-                <p class="search__text">professor paulo nader</p>
-            </div>
-            <div class="content__item">
-                <svg class="search__icon" xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M6.15 36 4 33.85 18.6 19.3l8.35 8.35L39 15.6h-6.35v-3H44v11.35h-2.95V17.8L26.9 31.95l-8.35-8.35Z"/></svg>
-                <p class="search__text">sorteio mega sena 2554 resultado</p>
-            </div>
-            <div class="content__item">
-                <svg class="search__icon" xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M6.15 36 4 33.85 18.6 19.3l8.35 8.35L39 15.6h-6.35v-3H44v11.35h-2.95V17.8L26.9 31.95l-8.35-8.35Z"/></svg>
-                <p class="search__text">lei cpf documento unico</p>
-            </div>
-            <div class="content__item">
-                <svg class="search__icon" xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M6.15 36 4 33.85 18.6 19.3l8.35 8.35L39 15.6h-6.35v-3H44v11.35h-2.95V17.8L26.9 31.95l-8.35-8.35Z"/></svg>
-                <p class="search__text">comandante marinha lula</p>
-            </div>
+        <div class="content__button">
+            <button form="search" type="submit">Pesquisa Google</button>
+            <button>Estou com Sorte</button>
         </div>
 
-        <div class="content__offer">
-            Google offerd in: Português (Brasil)
+        <div class="content__trend">
+            <div class="content__item content__title">
+                <p class="trend__title">Pesquisas em alta</p>
+                <svg  class="trend__icon" xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M24 40q-1 0-1.7-.7t-.7-1.7q0-1 .7-1.7t1.7-.7q1 0 1.7.7t.7 1.7q0 1-.7 1.7T24 40Zm0-13.6q-1 0-1.7-.7t-.7-1.7q0-1 .7-1.7t1.7-.7q1 0 1.7.7t.7 1.7q0 1-.7 1.7t-1.7.7Zm0-13.6q-1 0-1.7-.7t-.7-1.7q0-1 .7-1.7T24 8q1 0 1.7.7t.7 1.7q0 1-.7 1.7t-1.7.7Z"/></svg>
+            </div>
+            <div class="content__item">
+                <svg class="trend__icon" xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M6.15 36 4 33.85 18.6 19.3l8.35 8.35L39 15.6h-6.35v-3H44v11.35h-2.95V17.8L26.9 31.95l-8.35-8.35Z"/></svg>
+                <p class="trend__text">lojas americanas bolsa</p>
+            </div>
+            <div class="content__item">
+                <svg class="trend__icon" xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M6.15 36 4 33.85 18.6 19.3l8.35 8.35L39 15.6h-6.35v-3H44v11.35h-2.95V17.8L26.9 31.95l-8.35-8.35Z"/></svg>
+                <p class="trend__text">suzane von richthofen</p>
+                <img class="trend__img" src="./assets/images/suzane-von-richthofen.webp" alt="Foto de Suzane Von Richthofen">
+            </div>
+            <div class="content__item">
+                <svg class="trend__icon" xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M6.15 36 4 33.85 18.6 19.3l8.35 8.35L39 15.6h-6.35v-3H44v11.35h-2.95V17.8L26.9 31.95l-8.35-8.35Z"/></svg>
+                <p class="trend__text">agu</p>
+            </div>
+            <div class="content__item">
+                <svg class="trend__icon" xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M6.15 36 4 33.85 18.6 19.3l8.35 8.35L39 15.6h-6.35v-3H44v11.35h-2.95V17.8L26.9 31.95l-8.35-8.35Z"/></svg>
+                <p class="trend__text">professor paulo nader</p>
+            </div>
+            <div class="content__item">
+                <svg class="trend__icon" xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M6.15 36 4 33.85 18.6 19.3l8.35 8.35L39 15.6h-6.35v-3H44v11.35h-2.95V17.8L26.9 31.95l-8.35-8.35Z"/></svg>
+                <p class="trend__text">sorteio mega sena 2554 resultado</p>
+            </div>
+            <div class="content__item">
+                <svg class="trend__icon" xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M6.15 36 4 33.85 18.6 19.3l8.35 8.35L39 15.6h-6.35v-3H44v11.35h-2.95V17.8L26.9 31.95l-8.35-8.35Z"/></svg>
+                <p class="trend__text">lei cpf documento unico</p>
+            </div>
+            <div class="content__item">
+                <svg class="trend__icon" xmlns="http://www.w3.org/2000/svg" height="48" width="48"><path d="M6.15 36 4 33.85 18.6 19.3l8.35 8.35L39 15.6h-6.35v-3H44v11.35h-2.95V17.8L26.9 31.95l-8.35-8.35Z"/></svg>
+                <p class="trend__text">comandante marinha lula</p>
+            </div>
         </div>
     </main>
 
@@ -73,16 +84,22 @@
         <div class="footer__section footer__location">
             <span>Brasil</span>
         </div>
-        <div class="footer__section"></div>
-        <div class="footer__section footer__links">
-            <a class="footer__links--tema" href="#">Tema escuro: desativado</a>
-            <a class="footer__links--configuracao" href="#">Configurações</a>
-            <a class="footer__links--privacidade" href="#">Privacidade</a>
-            <a class="footer__links--termos" href="#">Termos</a>
-            <a class="footer__links--publicidade" href="#">Publicidade</a>
-            <a class="footer__links--negocios" href="#">Negócios</a>
-            <a class="footer__links--sobre" href="#">Sobre</a>
-            <a class="footer__links--como" href="#">Como funciona a Pesquisa</a>
+        <div class="footer__section" id="blank-space"></div>
+        <div class="footer__links">
+            <div>
+                <a class="footer__links--tema" href="#">Tema escuro: desativado</a>
+                <a class="footer__links--configuracao" href="#">Configurações</a>
+            </div>
+            <div>
+                <a class="footer__links--privacidade" href="#">Privacidade</a>
+                <a class="footer__links--termos" href="#">Termos</a>
+            </div>
+            <div class="section__links--about">
+                <a class="footer__links--publicidade" href="#">Publicidade</a>
+                <a class="footer__links--negocios" href="#">Negócios</a>
+                <a class="footer__links--como" href="#">Como funciona a Pesquisa</a>
+                <a class="footer__links--sobre" href="#">Sobre</a>
+            </div>
         </div>
     </footer>
 </body>
