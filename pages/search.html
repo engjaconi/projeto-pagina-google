@@ -1,0 +1,440 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>search engine optimization - Pesquisa Google</title>
+    <link rel="stylesheet" href="../assets/styles/search.css">
+    <link rel="shortcut icon" href="../assets/images/favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <header class="menu">
+        <div class="menu__section top">
+            <div class="menu__icon mobile">
+                <svg id="menu-burger" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M6 36v-3h36v3Zm0-10.5v-3h36v3ZM6 15v-3h36v3Z" />
+                </svg>
+            </div>
+            <div class="menu__logo">
+                <img src="../assets/images/googlelogo_color.png" alt="Logo do Google">
+            </div>
+
+            <div class="menu__top right">
+                <div class="menu__icon web">
+                    <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="m19.4 44-1-6.3q-.95-.35-2-.95t-1.85-1.25l-5.9 2.7L4 30l5.4-3.95q-.1-.45-.125-1.025Q9.25 24.45 9.25 24q0-.45.025-1.025T9.4 21.95L4 18l4.65-8.2 5.9 2.7q.8-.65 1.85-1.25t2-.9l1-6.35h9.2l1 6.3q.95.35 2.025.925Q32.7 11.8 33.45 12.5l5.9-2.7L44 18l-5.4 3.85q.1.5.125 1.075.025.575.025 1.075t-.025 1.05q-.025.55-.125 1.05L44 30l-4.65 8.2-5.9-2.7q-.8.65-1.825 1.275-1.025.625-2.025.925l-1 6.3ZM24 30.5q2.7 0 4.6-1.9 1.9-1.9 1.9-4.6 0-2.7-1.9-4.6-1.9-1.9-4.6-1.9-2.7 0-4.6 1.9-1.9 1.9-1.9 4.6 0 2.7 1.9 4.6 1.9 1.9 4.6 1.9Zm0-3q-1.45 0-2.475-1.025Q20.5 25.45 20.5 24q0-1.45 1.025-2.475Q22.55 20.5 24 20.5q1.45 0 2.475 1.025Q27.5 22.55 27.5 24q0 1.45-1.025 2.475Q25.45 27.5 24 27.5Zm0-3.5Zm-2.2 17h4.4l.7-5.6q1.65-.4 3.125-1.25T32.7 32.1l5.3 2.3 2-3.6-4.7-3.45q.2-.85.325-1.675.125-.825.125-1.675 0-.85-.1-1.675-.1-.825-.35-1.675L40 17.2l-2-3.6-5.3 2.3q-1.15-1.3-2.6-2.175-1.45-.875-3.2-1.125L26.2 7h-4.4l-.7 5.6q-1.7.35-3.175 1.2-1.475.85-2.625 2.1L10 13.6l-2 3.6 4.7 3.45q-.2.85-.325 1.675-.125.825-.125 1.675 0 .85.125 1.675.125.825.325 1.675L8 30.8l2 3.6 5.3-2.3q1.2 1.2 2.675 2.05Q19.45 35 21.1 35.4Z" />
+                    </svg>
+                </div>
+                <div class="menu__icon web">
+                    <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M11.3 40q-1.4 0-2.35-.95Q8 38.1 8 36.7q0-1.4.95-2.35.95-.95 2.35-.95 1.4 0 2.35.95.95.95.95 2.35 0 1.4-.95 2.35-.95.95-2.35.95ZM24 40q-1.4 0-2.35-.95-.95-.95-.95-2.35 0-1.4.95-2.35.95-.95 2.35-.95 1.4 0 2.35.95.95.95.95 2.35 0 1.4-.95 2.35Q25.4 40 24 40Zm12.7 0q-1.4 0-2.35-.95-.95-.95-.95-2.35 0-1.4.95-2.35.95-.95 2.35-.95 1.4 0 2.35.95.95.95.95 2.35 0 1.4-.95 2.35-.95.95-2.35.95ZM11.3 27.3q-1.4 0-2.35-.95Q8 25.4 8 24q0-1.4.95-2.35.95-.95 2.35-.95 1.4 0 2.35.95.95.95.95 2.35 0 1.4-.95 2.35-.95.95-2.35.95Zm12.7 0q-1.4 0-2.35-.95-.95-.95-.95-2.35 0-1.4.95-2.35.95-.95 2.35-.95 1.4 0 2.35.95.95.95.95 2.35 0 1.4-.95 2.35-.95.95-2.35.95Zm12.7 0q-1.4 0-2.35-.95-.95-.95-.95-2.35 0-1.4.95-2.35.95-.95 2.35-.95 1.4 0 2.35.95.95.95.95 2.35 0 1.4-.95 2.35-.95.95-2.35.95ZM11.3 14.6q-1.4 0-2.35-.95Q8 12.7 8 11.3q0-1.4.95-2.35Q9.9 8 11.3 8q1.4 0 2.35.95.95.95.95 2.35 0 1.4-.95 2.35-.95.95-2.35.95Zm12.7 0q-1.4 0-2.35-.95-.95-.95-.95-2.35 0-1.4.95-2.35Q22.6 8 24 8q1.4 0 2.35.95.95.95.95 2.35 0 1.4-.95 2.35-.95.95-2.35.95Zm12.7 0q-1.4 0-2.35-.95-.95-.95-.95-2.35 0-1.4.95-2.35Q35.3 8 36.7 8q1.4 0 2.35.95.95.95.95 2.35 0 1.4-.95 2.35-.95.95-2.35.95Z" />
+                    </svg>
+                </div>
+                <div class="menu__icon web">
+                    <svg viewBox="0 0 48 48" id="bell" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M8 38v-3h4.2V19.7q0-4.2 2.475-7.475Q17.15 8.95 21.2 8.1V6.65q0-1.15.825-1.9T24 4q1.15 0 1.975.75.825.75.825 1.9V8.1q4.05.85 6.55 4.125t2.5 7.475V35H40v3Zm16-14.75ZM24 44q-1.6 0-2.8-1.175Q20 41.65 20 40h8q0 1.65-1.175 2.825Q25.65 44 24 44Zm-8.8-9h17.65V19.7q0-3.7-2.55-6.3-2.55-2.6-6.25-2.6t-6.275 2.6Q15.2 16 15.2 19.7Z" />
+                    </svg>
+                </div>
+                <img src="../assets/images/tiagojaconi.jpg" alt="Foto de perfil do usuário" class="menu__avatar">
+            </div>
+        </div>
+        <div class="menu__section middle">
+            <form class="menu__search" action="./pages/search.html" method="get" id="search-form">
+                <button class="button__submit" type="submit" title="submit"></button>
+                <div class="search__icon">
+                    <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M39.8 41.95 26.65 28.8q-1.5 1.3-3.5 2.025-2 .725-4.25.725-5.4 0-9.15-3.75T6 18.75q0-5.3 3.75-9.05 3.75-3.75 9.1-3.75 5.3 0 9.025 3.75 3.725 3.75 3.725 9.05 0 2.15-.7 4.15-.7 2-2.1 3.75L42 39.75Zm-20.95-13.4q4.05 0 6.9-2.875Q28.6 22.8 28.6 18.75t-2.85-6.925Q22.9 8.95 18.85 8.95q-4.1 0-6.975 2.875T9 18.75q0 4.05 2.875 6.925t6.975 2.875Z" />
+                    </svg>
+                </div>
+                <input class="menu__input" type="text" name="search" id="search" required>
+            </form>
+        </div>
+        <div class="menu__section bottom">
+            <div class="active">
+                <div class="search__icon web">
+                    <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M39.8 41.95 26.65 28.8q-1.5 1.3-3.5 2.025-2 .725-4.25.725-5.4 0-9.15-3.75T6 18.75q0-5.3 3.75-9.05 3.75-3.75 9.1-3.75 5.3 0 9.025 3.75 3.725 3.75 3.725 9.05 0 2.15-.7 4.15-.7 2-2.1 3.75L42 39.75Zm-20.95-13.4q4.05 0 6.9-2.875Q28.6 22.8 28.6 18.75t-2.85-6.925Q22.9 8.95 18.85 8.95q-4.1 0-6.975 2.875T9 18.75q0 4.05 2.875 6.925t6.975 2.875Z" />
+                    </svg>
+                </div>
+                <a href="#" class="section__links">Todas</a>
+            </div>
+            <div class="menu__icon web">
+                <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M7 42q-1.25 0-2.125-.875T4 39V6l3.35 3.35L10.65 6 14 9.35 17.35 6l3.3 3.35L24 6l3.35 3.35L30.65 6 34 9.35 37.35 6l3.3 3.35L44 6v33q0 1.25-.875 2.125T41 42Zm0-3h15.5V25H7v14Zm18.5 0H41v-5.5H25.5Zm0-8.5H41V25H25.5ZM7 22h34v-6H7Z" />
+                </svg>
+            </div>
+            <a href="#" class="section__links">Notícias</a>
+            <div class="menu__icon web">
+                <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M10 44q-2.5 0-4.25-1.75T4 38V10q0-2.5 1.75-4.25T10 4h28q2.5 0 4.25 1.75T44 10v28q0 2.5-1.75 4.25T38 44Zm0-3h28q1.3 0 2.15-.875Q41 39.25 41 38V10q0-1.3-.85-2.15Q39.3 7 38 7H10q-1.25 0-2.125.85T7 10v28q0 1.25.875 2.125T10 41Zm3.2-5.5 6.8-6.8 3.65 3.6L28 26.8l6.95 8.7Zm2.8-16q-1.45 0-2.475-1.025Q12.5 17.45 12.5 16q0-1.45 1.025-2.475Q14.55 12.5 16 12.5q1.45 0 2.475 1.025Q19.5 14.55 19.5 16q0 1.45-1.025 2.475Q17.45 19.5 16 19.5Z" />
+                </svg>
+            </div>
+            <a href="#" class="section__links">Imagens</a>
+            <div class="menu__icon web">
+                <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="m19.6 32.35 13-8.45-13-8.45ZM7 40q-1.2 0-2.1-.9Q4 38.2 4 37V11q0-1.2.9-2.1Q5.8 8 7 8h34q1.2 0 2.1.9.9.9.9 2.1v26q0 1.2-.9 2.1-.9.9-2.1.9Zm0-3h34V11H7v26Zm0 0V11v26Z" />
+                </svg>
+            </div>
+            <a href="#" class="section__links">Vídeos</a>
+            <a href="#" class="section__links mobile">Maps</a>
+            <div class="menu__icon web">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+                    <path
+                        d="M11 44q-1.2 0-2.1-.9Q8 42.2 8 41V7q0-1.2.9-2.1Q9.8 4 11 4h26q1.2 0 2.1.9.9.9.9 2.1v34q0 1.2-.9 2.1-.9.9-2.1.9Zm0-3h26V7h-3v13.3l-4.85-2.8-4.85 2.8V7H11v34Zm0 0V7v34Zm13.3-20.7 4.85-2.8L34 20.3l-4.85-2.8-4.85 2.8Z" />
+                </svg>
+            </div>
+            <a href="#" class="section__links web">Livros</a>
+            <div class="section__icon web">
+                <svg viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M24 40q-1 0-1.7-.7t-.7-1.7q0-1 .7-1.7t1.7-.7q1 0 1.7.7t.7 1.7q0 1-.7 1.7T24 40Zm0-13.6q-1 0-1.7-.7t-.7-1.7q0-1 .7-1.7t1.7-.7q1 0 1.7.7t.7 1.7q0 1-.7 1.7t-1.7.7Zm0-13.6q-1 0-1.7-.7t-.7-1.7q0-1 .7-1.7T24 8q1 0 1.7.7t.7 1.7q0 1-.7 1.7t-1.7.7Z" />
+                </svg>
+            </div>
+            <a href="#" class="section__links web">Mais</a>
+            <a href="#" class="section__links web">Ferramentas</a>
+        </div>
+    </header>
+    <main class="content">
+        <section class="section__content">
+            <h1 class="section__title">Artigos acadêmicos sobre search engine optimization</h1>
+            <a class="section__links" href="#">
+                Search engine optimization
+                <span class="section__span">Davis Citado por 144</span>
+            </a>
+            <a class="section__links" href="#">
+                Search engine optimization
+                <span class="section__span">Zilincan Citado por 66</span>
+            </a>
+            <button class="section__button mobile">Pesquisar no Google Acadêmico
+            </button>
+        </section>
+        <section class="section__content">
+            <div class="section__div">
+                <h1 class="section__title">
+                    Otimização para motores de busca (Search Engine Optimization)
+                </h1>
+                <div class="icon__div mobile">
+                    <svg class="section__icon" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M24 40q-1 0-1.7-.7t-.7-1.7q0-1 .7-1.7t1.7-.7q1 0 1.7.7t.7 1.7q0 1-.7 1.7T24 40Zm0-13.6q-1 0-1.7-.7t-.7-1.7q0-1 .7-1.7t1.7-.7q1 0 1.7.7t.7 1.7q0 1-.7 1.7t-1.7.7Zm0-13.6q-1 0-1.7-.7t-.7-1.7q0-1 .7-1.7T24 8q1 0 1.7.7t.7 1.7q0 1-.7 1.7t-1.7.7Z" />
+                    </svg>
+                </div>
+                <img class="section__img" src="../assets/images/seo.jpg" alt="Icone representativo do SEO">
+            </div>
+            <p>
+                Otimização para motores de busca ou otimização para mecanismos de busca é o conjunto de estratégias para
+                potencializar e melhorar o posicionamento de um site nas páginas de resultados orgânicos ... <a
+                    class=".section__links" href="#">Wikipédia</a>
+            </p>
+            <details>
+                <summary>Estratégia</summary>
+                <p>Estratégia de SEO <span class="bold">é o processo de organizar o conteúdo de um site por
+                        tópicos</span>. Isso ajuda os mecanismos de pesquisa (como o Google) a entenderem a intenção do
+                    usuário durante a pesquisa. Ao otimizar uma página da web por meio de tópicos e palavras-chave
+                    dentro desses tópicos, você melhora a experiência do usuário. 13 de dez. de 2021
+                </p>
+            </details>
+            <details>
+                <summary>Título</summary>
+                <p>Também chamada de <span class="bold">título SEO</span>, a tag title (tag título em português) é o
+                    título que consta no código HTML da página correspondente e que por sua vez, é o que é usado pelo
+                    Google e demais mecanismos de busca, para exibir o título de cada resultado exibido nas páginas de
+                    resultados ou SERPs.
+                </p>
+            </details>
+            <details>
+                <summary>Vantagens</summary>
+                <p class="bold">SEO e seus benefícios</p>
+                <ul>
+                    <li>Oferece taxas de aquisição mais altas. ...</li>
+                    <li>Melhora experiência do usuário. ...</li>
+                    <li>Incentiva usuários locais a visitar a loja física. ...</li>
+                    <li>Ajuda a criar credibilidade para marca. ...</li>
+                    <li>Ajuda a estabelecer o reconhecimento da marca. ...</li>
+                    <li>Garante compatibilidade com dispositivos móveis do seu site.</li>
+                </ul>
+            </details>
+            <details>
+                <summary>Dicas</summary>
+                <p class="bold">6 dicas de SEO para melhorar o posicionamento do seu site</p>
+                <ol>
+                    <li>Pesquise palavras-chave e capriche no conteúdo. ...</li>
+                    <li>Atente-se aos links para o seu site. ...</li>
+                    <li>Entenda a importância das meta descriptions para SEO. ...</li>
+                    <li>Pense na experiência do usuário. ...</li>
+                    <li>Avalie a velocidade de carregamento. ...</li>
+                    <li>Mantenha o site atualizado.</li>
+                </ol>
+            </details>
+        </section>
+
+        <section class="section__content">
+            <a
+                href="https://resultadosdigitais.com.br/marketing/o-que-e-seo/#:~:text=SEO%20%C3%A9%20a%20sigla%20de,outros%20buscadores%2C%20gerando%20tr%C3%A1fego%20org%C3%A2nico.">
+                <div class="section__head">
+                    <span class="img mobile"><img src="../assets/images/resultados-digitais.ico"
+                            alt="Logo Resultados Digitais"></span>
+                    <div>
+                        <span class="mobile">resultadosdigitais.com.br</span><br>
+                        <span>https://resultadosdigitais.com.br › marketing › o-que-e-...</span>
+                    </div>
+                </div>
+                <h1 class="section__title">
+                    SEO: o que é e TUDO sobre Search Engine Optimization [2022]
+                </h1>
+            </a>
+            <p>
+                SEO é a sigla de Search Engine Optimization (otimização de mecanismos de busca) e é o conjunto de
+                técnicas usadas, geralmente divididas entre tecnologia, ...
+            </p>
+        </section>
+
+        <section class="section__content">
+            <a href="https://rockcontent.com/blog/what-is-seo/">
+                <div class="section__head">
+                    <span class="img mobile"><img src="../assets/images/rockcontent.png" alt="Logo Rockcontent"></span>
+                    <div>
+                        <span class="mobile">rockcontent.com</span><br>
+                        <span>
+                            https://rockcontent.com › Latest
+                        </span>
+                    </div>
+                </div>
+                <h1 class="section__title">
+                    Search Engine Optimization: The Ultimate Guide to SEO
+                </h1>
+            </a>
+            <p>
+                1 de abr. de 2022 — Search Engine Optimization (SEO) is a set of techniques to optimize sites. Find out
+                how to achieve the first results on Google in our guide!
+            </p>
+        </section>
+
+        <section class="section__content">
+            <a href="https://searchengineland.com/guide/what-is-seo">
+                <div class="section__head">
+                    <span class="img mobile"><img src="../assets/images/searchengineland.png"
+                            alt="Logo Search Engineland"></span>
+                    <div>
+                        <span class="mobile">searchengineland.com</span><br>
+                        <span>https://searchengineland.com › guide</span>
+                    </div>
+                </div>
+                <h1 class="section__title">
+                    What Is SEO - Search Engine Optimization?
+                </h1>
+            </a>
+            <p>
+                SEO stands for “search engine optimization.” In simple terms, it means the process of improving your
+                site to increase its visibility when people search for ...
+            </p>
+        </section>
+
+        <section class="section__content">
+            <a href="https://developers.google.com/search/docs/fundamentals/seo-starter-guide">
+                <div class="section__head">
+                    <span class="img mobile"><img src="../assets/images/googledeveloper.png"
+                            alt="Logo Developers Google"></span>
+                    <div>
+                        <span class="mobile">developers.google.com</span><br>
+                        <span>https://developers.google.com › docs</span>
+                    </div>
+                </div>
+                <h1 class="section__title">
+                    SEO Starter Guide: The Basics | Google Search Central
+                </h1>
+            </a>
+            <p>
+                A knowledge of basic SEO can have a noticeable impact. Explore the Google SEO starter guide for an
+                overview of search engine optimization essentials.
+            </p>
+        </section>
+
+        <section class="section__content">
+            <a href="https://en.wikipedia.org/wiki/Search_engine_optimization">
+                <div class="section__head">
+                    <span class="img mobile"><img src="../assets/images/wikipedia.ico" alt="Logo Wikipedia"></span>
+                    <div>
+                        <span class="mobile">wikipedia.org</span><br>
+                        <span>
+                            https://en.wikipedia.org › wiki › Se...
+                        </span>
+                    </div>
+                </div>
+                <h1 class="section__title">
+                    Search engine optimization - Wikipedia
+                </h1>
+            </a>
+            <p>
+                Search engine optimization (SEO) is the process of improving the quality and quantity of website traffic
+                to a website or a web page from search engines.
+            </p>
+        </section>
+
+        <section class="section__content">
+            <a href="https://www.wordstream.com/seo">
+                <div class="section__head">
+                    <span class="img mobile"><img src="../assets/images/wordstream.png" alt="Logo Wordstream"></span>
+                    <div>
+                        <span class="mobile">
+                            wordstream.com
+                        </span><br>
+                        <span>
+                            https://www.wordstream.com › seo
+                        </span>
+                    </div>
+                </div>
+                <h1 class="section__title">
+                    Search Engine Optimization - Learn to Optimize for SEO
+                </h1>
+            </a>
+            <p>
+                Search engine optimization is a set of technical and content practices aimed at aligning a website page
+                with a search engine's ranking algorithm so it can ...
+            </p>
+        </section>
+
+        <section class="section__content">
+            <a href="https://www.dinamize.com.br/blog/seo/">
+                <div class="section__head">
+                    <span class="img mobile"><img src="../assets/images/dinamize.png" alt="Logo Dinamize"></span>
+                    <div>
+                        <span class="mobile">
+                            dinamize.com.br
+                        </span><br>
+                        <span>
+                            https://www.dinamize.com.br › blog › seo</span>
+                    </div>
+                </div>
+                <h1 class="section__title">
+                    SEO - O que é e por onde começar? - Dinamize
+                </h1>
+            </a>
+            <p>
+                O Search Engine Optimization ou SEO é o conjunto de técnicas que um profissional de marketing pode
+                implementar, visando alcançar melhores resultados para o ...
+            </p>
+        </section>
+
+        <section class="section__content">
+            <a href="https://www.conversion.com.br/blog/o-que-e-seo/">
+                <div class="section__head">
+                    <span class="img mobile"><img src="../assets/images/conversion.png" alt="Logo Conversion"></span>
+                    <div>
+                        <span class="mobile">
+                            conversion.com.br
+                        </span><br>
+                        <span>
+                            https://www.conversion.com.br › blog › o-que-e-seo</span>
+                    </div>
+                </div>
+                <h1 class="section__title">
+                    O que é SEO (Search Engine Optimization)? Guia do básico ...
+                </h1>
+            </a>
+            <p>
+                27 de nov. de 2022 — SEO, ou Search Engine Optimization, é um conjunto de técnicas e estratégias cujo
+                objetivo é fazer com que sites fiquem melhor posicionados ...
+            </p>
+        </section>
+
+        <div class="search__div">
+            <button class="search__button mobile">
+                Mais resultados de pesquisa
+                <span>
+                    <svg class="section__icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 48 48">
+                        <path d="m24 30.75-12-12 2.15-2.15L24 26.5l9.85-9.85L36 18.8Z" />
+                    </svg>
+                </span>
+            </button>
+
+            <div class="pages__row web">
+                <span class="blue text">G</span>
+                <div class="pages__column">
+                    <span class="red text">o</span>
+                    <a href="#" class="active">1</a>
+                </div>
+                <div class="pages__column">
+                    <span class="yellow text">o</span>
+                    <a href="#">2</a>
+                </div>
+                <div class="pages__column">
+                    <span class="yellow text">o</span>
+                    <a href="#">3</a>
+                </div>
+                <div class="pages__column">
+                    <span class="yellow text">o</span>
+                    <a href="#">4</a>
+                </div>
+                <div class="pages__column">
+                    <span class="yellow text">o</span>
+                    <a href="#">5</a>
+                </div>
+                <div class="pages__column">
+                    <span class="yellow text">o</span>
+                    <a href="#">6</a>
+                </div>
+                <div class="pages__column">
+                    <span class="yellow text">o</span>
+                    <a href="#">7</a>
+                </div>
+                <div class="pages__column">
+                    <span class="yellow text">o</span>
+                    <a href="#">8</a>
+                </div>
+                <div class="pages__column">
+                    <span class="yellow text">o</span>
+                    <a href="#">9</a>
+                </div>
+                <div class="pages__column">
+                    <span class="yellow text">o</span>
+                    <a href="#">10</a>
+                </div>
+                <span class="blue text">g</span>
+                <span class="green text">l</span>
+                <span class="red text">e</span>
+                <a href="#">
+                    <div class="pages__column">
+                        <span class="blue">></span>
+                        <span class="blue">Mais</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="footer__section footer__location">
+            <span>Brasil</span>
+        </div>
+        <div class="footer__section" id="blank-space"></div>
+        <div class="footer__links">
+            <div>
+                <a class="footer__links--tema" href="#">Tema escuro: desativado</a>
+                <a class="footer__links--configuracao" href="#">Configurações</a>
+            </div>
+            <div>
+                <a class="footer__links--privacidade" href="#">Privacidade</a>
+                <a class="footer__links--termos" href="#">Termos</a>
+            </div>
+            <div class="section__links--about">
+                <a class="footer__links--publicidade" href="#">Publicidade</a>
+                <a class="footer__links--negocios" href="#">Negócios</a>
+                <a class="footer__links--como" href="#">Como funciona a Pesquisa</a>
+                <a class="footer__links--sobre" href="#">Sobre</a>
+            </div>
+        </div>
+    </footer>
+</body>
+
+</html>
